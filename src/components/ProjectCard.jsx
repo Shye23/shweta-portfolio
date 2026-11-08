@@ -1,21 +1,23 @@
 import { ArrowUpRight, GitBranch } from 'lucide-react';
 
 const ProjectCard = ({ project }) => {
-  const hasLink = (url) => url?.startsWith('http');
+  const getLink = (url) => (typeof url === 'string' ? url.trim() : '');
+  const githubUrl = getLink(project.github);
+  const demoUrl = getLink(project.demo);
 
   return (
     <article className="project-card" aria-label={project.title}>
       <div className="project-card__top">
         <span className="project-category">{project.category}</span>
         <div className="project-actions">
-          {hasLink(project.github) && (
-            <a href={project.github} target="_blank" rel="noreferrer" aria-label={`GitHub repository for ${project.title}`} className="project-link project-link--ghost">
+          {githubUrl.startsWith('http') && (
+            <a href={githubUrl} target="_blank" rel="noreferrer" aria-label={`GitHub repository for ${project.title}`} className="project-link project-link--ghost">
               <GitBranch size={16} />
               Code
             </a>
           )}
-          {hasLink(project.demo) && (
-            <a href={project.demo} target="_blank" rel="noreferrer" aria-label={`Live demo for ${project.title}`} className="project-link">
+          {demoUrl.startsWith('http') && (
+            <a href={demoUrl} target="_blank" rel="noreferrer" aria-label={`Live demo for ${project.title}`} className="project-link">
               Demo
               <ArrowUpRight size={16} />
             </a>
