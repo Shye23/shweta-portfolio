@@ -10,7 +10,7 @@ export const projects = [
     techStack: ['Python', 'PyTorch', 'Computer Vision', 'CNN', 'Satellite Imagery', 'GIS', 'QGIS'],
     contribution:
       'Developing a final-year engineering project that preprocesses multi-temporal imagery, aligns image patches, creates binary change masks, and applies deep-learning-based change detection through a web-based visualization workflow.',
-    github: 'GITHUB_URBANEYE_URL',
+    github: 'https://github.com/Shye23/urbaneye-encroachment-detection.git',
     demo: '#',
     result: 'Final-year engineering project in development',
   },

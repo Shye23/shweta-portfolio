@@ -92,7 +92,7 @@ const App = () => {
             <div className="about-copy">
               <p>
                 I enjoy taking projects from data preprocessing and model development through backend
-                and API integration and deployment. My focus is on building systems that are useful,
+                and API integration. My focus is on building systems that are useful,
                 understandable, and grounded in real-world problem solving.
               </p>
               <p>
